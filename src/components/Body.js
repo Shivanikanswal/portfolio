@@ -24,11 +24,7 @@ const Body = () => {
               </div>
             </div>
             <div className="imgprot rounded-full overflow-hidden w-1/3">
-              <img
-                //src="https://cdn3d.iconscout.com/3d/premium/thumb/female-developer-5359992-4492091.png"
-                src={portfolioImg}
-                className="portfolioimg"
-              ></img>
+              <img src={portfolioImg} className="portfolioimg"></img>
             </div>
           </div>
         </div>
