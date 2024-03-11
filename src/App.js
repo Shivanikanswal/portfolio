@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import ReactDOM from "react-dom/client";
 const AppLayout = () => {
   return (
-    <div>
+    <div className=" font-sans">
       <Header />
       <Body />
       <Footer />

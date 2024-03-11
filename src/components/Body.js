@@ -14,7 +14,7 @@ const Body = () => {
                   focused on creating user-centric web applications.{" "}
                 </p>
               </div>
-              <div className="text-xl max-w-[700px] font-normal font-sans items-center">
+              <div className="text-xl max-w-[700px] font-normal items-center">
                 <span>Get in Touch 👉 </span>
                 <span className="">
                   <a href="mailto:shivanikanswal@gmail.com">
@@ -33,10 +33,10 @@ const Body = () => {
         id="background"
         className="background-section flex py-24 px-40 justify-center"
       >
-        <div className=" mr-20 text-blue-400 font-semibold text-lg">
+        <div className=" mr-20 text-blue-400 font-semibold text-xl">
           BACKGROUND
         </div>
-        <div className=" font-light">
+        <div className=" font-light text-lg">
           <p className=" mb-3">
             I've had worked as an{" "}
             <span className=" font-normal">Magento Developer</span> at{" "}
@@ -61,16 +61,19 @@ const Body = () => {
         </div>
       </section>
       <section id="projects" className="projects-section flex py-24 px-40">
-        <div className=" mr-20 text-blue-400 font-semibold text-lg">
+        <div className=" mr-20 text-blue-400 font-semibold text-xl">
           PROJECTS
         </div>
         <div>
-          <div className="project-1">
-            <div className="project-name text-base font-semibold">
-              <a href="">Moviee Adda ➡</a>
+          <div className="project-1 mb-10">
+            <div className="project-name text-base font-semibold mb-3">
+              <a href="https://movieeadda.netlify.app/">Moviee Adda ➡</a>
             </div>
-            <p>movieeadda app is useful for movie lovers</p>
-            <div className="tech-used text-blue-400 font-semibold ">
+            <p className=" mb-3">
+              A small react project, basic designed movie website for the people
+              who are curious about movies using TMDB API.{" "}
+            </p>
+            <div className="tech-used text-blue-400 font-semibold text-sm">
               <span className=" border border-solid border-blue-400 m-1 rounded-lg px-2 py-1 ">
                 React
               </span>
@@ -91,15 +94,38 @@ const Body = () => {
               </span>
             </div>
           </div>
-          <div className="project-2">
-            <div className="project-name text-base font-semibold">
-              <a href="">Food Maniaa ➡</a>
+          <div className="project-2 mb-10">
+            <div className="project-name text-base font-semibold mb-3">
+              <a href="https://foodmaniaa.netlify.app/">Food Maniaa ➡</a>
             </div>
-            <p>general food app</p>
-            <div className="tech-used">
-              <span></span>
-              <span></span>
-              <span></span>
+            <p className="mb-3">
+              Developed a highly efficient food delivery App including features
+              like browsing, searching and filtering of restaurants. User can go
+              through the items a particular restaurant is providing and can add
+              them to cart and order food.
+            </p>
+            <div className="tech-used text-blue-400 font-semibold text-sm">
+              <span className=" border border-solid border-blue-400 m-1 rounded-lg px-2 py-1 ">
+                JavaScript
+              </span>
+              <span className=" border border-solid border-blue-400 m-1 rounded-lg px-2 py-1 ">
+                TailwindCSS
+              </span>
+              <span className=" border border-solid border-blue-400 m-1 rounded-lg px-2 py-1 ">
+                React
+              </span>
+              <span className=" border border-solid border-blue-400 m-1 rounded-lg px-2 py-1 ">
+                Redux
+              </span>
+              <span className=" border border-solid border-blue-400 m-1 rounded-lg px-2 py-1 ">
+                HTML
+              </span>
+              <span className=" border border-solid border-blue-400 m-1 rounded-lg px-2 py-1 ">
+                Swiggy Live API
+              </span>
+              <span className=" border border-solid border-blue-400 m-1 rounded-lg px-2 py-1 ">
+                React Router
+              </span>
             </div>
           </div>
         </div>
