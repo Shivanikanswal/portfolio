@@ -1,4 +1,13 @@
 import portfolioImg from "../utils/portfolio-img.jpg";
+import htmlLogo from "../utils/media/html5-icon.png";
+import cssLogo from "../utils/media/css3-icon.png";
+import githubLogo from "../utils/media/github-icon.jpg";
+import jQueryLogo from "../utils/media/jQuery-icon.png";
+import javaScriptIcon from "../utils/media/js-icon.png";
+import magentoIcon from "../utils/media/magento-icon.png";
+import phpIcon from "../utils/media/php-icon.png";
+import reactLogo from "../utils/media/react-icon.png";
+
 const Body = () => {
   return (
     <div id="main-page" className=" mx-7 px-8 py-9">
@@ -64,7 +73,61 @@ const Body = () => {
         <div className="mr-20 text-blue-400 font-semibold text-xl">
           EXPERIENCE
         </div>
-        <div></div>
+        <div>
+          <p className=" text-xl font-semibold mb-9 ml-28">
+            SOME TECHNOLOGIES I'VE WORKED WITH
+          </p>
+          <div className="skills grid grid-cols-4 gap-4 w-2/3">
+            <div className="logocls">
+              <img
+                src={htmlLogo}
+                className="html h-36 w-36 grayscale hover:filter-none"
+              ></img>
+            </div>
+            <div className="logocls">
+              <img
+                src={cssLogo}
+                className="css h-36 w-[6.2rem] grayscale hover:filter-none"
+              ></img>
+            </div>
+            <div className="logocls">
+              <img
+                src={githubLogo}
+                className="git h-36 w-56 grayscale hover:filter-none"
+              ></img>
+            </div>
+            <div className="logocls">
+              <img
+                src={jQueryLogo}
+                className="jquery h-36 w-36 grayscale hover:filter-none"
+              ></img>
+            </div>
+            <div className="logocls">
+              <img
+                src={javaScriptIcon}
+                className="javas h-36 w-36 grayscale hover:filter-none"
+              ></img>
+            </div>
+            <div className="logocls">
+              <img
+                src={magentoIcon}
+                className="magen h-36 w-36 grayscale hover:filter-none"
+              ></img>
+            </div>
+            <div className="logocls">
+              <img
+                src={reactLogo}
+                className="reactl h-36 w-36 grayscale hover:filter-none"
+              ></img>
+            </div>
+            <div className="logocls">
+              <img
+                src={phpIcon}
+                className="php h-36 w-36 grayscale hover:filter-none"
+              ></img>
+            </div>
+          </div>
+        </div>
       </section>
       <section id="projects" className="projects-section flex py-24 px-40">
         <div className=" mr-20 text-blue-400 font-semibold text-xl">WORK</div>

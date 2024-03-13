@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className=" flex justify-between px-14 py-20">
+    <footer id="contact" className=" flex justify-between px-14 py-20">
       <div className="designedby text-base font-semibold font-sans">
         Designed and Developed by <br />
         Shivani Kanswal 2024
