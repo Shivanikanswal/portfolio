@@ -60,10 +60,14 @@ const Body = () => {
           </p>
         </div>
       </section>
-      <section id="projects" className="projects-section flex py-24 px-40">
-        <div className=" mr-20 text-blue-400 font-semibold text-xl">
-          PROJECTS
+      <section className="Experience flex py-24 px-40">
+        <div className="mr-20 text-blue-400 font-semibold text-xl">
+          EXPERIENCE
         </div>
+        <div></div>
+      </section>
+      <section id="projects" className="projects-section flex py-24 px-40">
+        <div className=" mr-20 text-blue-400 font-semibold text-xl">WORK</div>
         <div>
           <div className="project-1 mb-10">
             <div className="project-name text-base font-semibold mb-3">
