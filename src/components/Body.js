@@ -7,6 +7,10 @@ import javaScriptIcon from "../utils/media/js-icon.png";
 import magentoIcon from "../utils/media/magento-icon.png";
 import phpIcon from "../utils/media/php-icon.png";
 import reactLogo from "../utils/media/react-icon.png";
+import tailwindLogo from "../utils/media/tailwind-icon.png";
+import linuxLogo from "../utils/media/linux-icon.jpg";
+import lessIcon from "../utils/media/less-icon.png";
+import parcelIcon from "../utils/media/parcel-icon.png";
 
 const Body = () => {
   return (
@@ -26,7 +30,10 @@ const Body = () => {
               <div className="text-xl max-w-[700px] font-normal items-center">
                 <span>Get in Touch 👉 </span>
                 <span className="">
-                  <a href="mailto:shivanikanswal@gmail.com">
+                  <a
+                    href="mailto:shivanikanswal@gmail.com"
+                    className=" hover:underline hover:text-blue-500"
+                  >
                     shivanikanswal@gmail.com
                   </a>
                 </span>
@@ -78,52 +85,77 @@ const Body = () => {
             SOME TECHNOLOGIES I'VE WORKED WITH
           </p>
           <div className="skills grid grid-cols-4 gap-4 w-2/3">
+            {/* // Add JIRA, invision, linux, less, phtml,parcel,tailwindcss(vvimp), correct work section font */}
             <div className="logocls">
               <img
                 src={htmlLogo}
-                className="html h-36 w-36 grayscale hover:filter-none"
+                className="html h-28 w-36 grayscale hover:filter-none"
               ></img>
             </div>
             <div className="logocls">
               <img
                 src={cssLogo}
-                className="css h-36 w-[6.2rem] grayscale hover:filter-none"
-              ></img>
-            </div>
-            <div className="logocls">
-              <img
-                src={githubLogo}
-                className="git h-36 w-56 grayscale hover:filter-none"
-              ></img>
-            </div>
-            <div className="logocls">
-              <img
-                src={jQueryLogo}
-                className="jquery h-36 w-36 grayscale hover:filter-none"
+                className="css h-28 w-[6.2rem] grayscale hover:filter-none"
               ></img>
             </div>
             <div className="logocls">
               <img
                 src={javaScriptIcon}
-                className="javas h-36 w-36 grayscale hover:filter-none"
+                className="javas h-28 w-36 grayscale hover:filter-none"
+              ></img>
+            </div>
+            <div className="logocls">
+              <img
+                src={githubLogo}
+                className="git h-28 w-56 grayscale hover:filter-none"
+              ></img>
+            </div>
+            <div className="logocls">
+              <img
+                src={jQueryLogo}
+                className="jquery h-28 w-36 grayscale hover:filter-none"
               ></img>
             </div>
             <div className="logocls">
               <img
                 src={magentoIcon}
-                className="magen h-36 w-36 grayscale hover:filter-none"
+                className="magen h-28 w-36 grayscale hover:filter-none"
               ></img>
             </div>
             <div className="logocls">
               <img
                 src={reactLogo}
-                className="reactl h-36 w-36 grayscale hover:filter-none"
+                className="reactl h-28 w-36 grayscale hover:filter-none"
               ></img>
             </div>
             <div className="logocls">
               <img
                 src={phpIcon}
-                className="php h-36 w-36 grayscale hover:filter-none"
+                className="php h-28 w-36 grayscale hover:filter-none"
+              ></img>
+            </div>
+            <div className="logocls">
+              <img
+                src={tailwindLogo}
+                className="jquery h-28 w-36 grayscale hover:filter-none"
+              ></img>
+            </div>
+            <div className="logocls">
+              <img
+                src={linuxLogo}
+                className="jquery h-28 w-36 grayscale hover:filter-none"
+              ></img>
+            </div>
+            <div className="logocls">
+              <img
+                src={parcelIcon}
+                className="jquery h-28 w-36 grayscale hover:filter-none"
+              ></img>
+            </div>
+            <div className="logocls">
+              <img
+                src={lessIcon}
+                className="jquery h-28 w-36 grayscale hover:filter-none"
               ></img>
             </div>
           </div>

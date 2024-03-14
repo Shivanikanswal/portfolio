@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer id="contact" className=" flex justify-between px-14 py-20">
       <div className="designedby text-base font-semibold font-sans">
-        Designed and Developed by <br />
+        Developed by <br />
         Shivani Kanswal 2024
       </div>
       <div className="footer-links uppercase font-bold text-blue-500">
