@@ -76,7 +76,7 @@ const Body = () => {
           </p>
         </div>
       </section>
-      <section className="Experience flex py-24 px-40">
+      <section id="experience" className="Experience flex py-24 px-40">
         <div className="mr-20 text-blue-400 font-semibold text-xl">
           EXPERIENCE
         </div>
@@ -85,7 +85,6 @@ const Body = () => {
             SOME TECHNOLOGIES I'VE WORKED WITH
           </p>
           <div className="skills grid grid-cols-4 gap-4 w-2/3">
-            {/* // Add JIRA, invision, linux, less, phtml,parcel,tailwindcss(vvimp), correct work section font */}
             <div className="logocls">
               <img
                 src={htmlLogo}
@@ -112,6 +111,18 @@ const Body = () => {
             </div>
             <div className="logocls">
               <img
+                src={phpIcon}
+                className="php h-28 w-36 grayscale hover:filter-none"
+              ></img>
+            </div>
+            <div className="logocls">
+              <img
+                src={tailwindLogo}
+                className="jquery h-28 w-36 grayscale hover:filter-none"
+              ></img>
+            </div>
+            <div className="logocls">
+              <img
                 src={jQueryLogo}
                 className="jquery h-28 w-36 grayscale hover:filter-none"
               ></img>
@@ -130,13 +141,7 @@ const Body = () => {
             </div>
             <div className="logocls">
               <img
-                src={phpIcon}
-                className="php h-28 w-36 grayscale hover:filter-none"
-              ></img>
-            </div>
-            <div className="logocls">
-              <img
-                src={tailwindLogo}
+                src={lessIcon}
                 className="jquery h-28 w-36 grayscale hover:filter-none"
               ></img>
             </div>
@@ -152,12 +157,6 @@ const Body = () => {
                 className="jquery h-28 w-36 grayscale hover:filter-none"
               ></img>
             </div>
-            <div className="logocls">
-              <img
-                src={lessIcon}
-                className="jquery h-28 w-36 grayscale hover:filter-none"
-              ></img>
-            </div>
           </div>
         </div>
       </section>
@@ -165,10 +164,10 @@ const Body = () => {
         <div className=" mr-20 text-blue-400 font-semibold text-xl">WORK</div>
         <div>
           <div className="project-1 mb-10">
-            <div className="project-name text-base font-semibold mb-3">
+            <div className="project-name text-lg font-semibold mb-3 hover:underline">
               <a href="https://movieeadda.netlify.app/">Moviee Adda ➡</a>
             </div>
-            <p className=" mb-3">
+            <p className=" mb-3 font-normal text-base">
               A small react project, basic designed movie website for the people
               who are curious about movies using TMDB API.{" "}
             </p>
@@ -194,10 +193,10 @@ const Body = () => {
             </div>
           </div>
           <div className="project-2 mb-10">
-            <div className="project-name text-base font-semibold mb-3">
+            <div className="project-name text-lg font-semibold mb-3 hover:underline">
               <a href="https://foodmaniaa.netlify.app/">Food Maniaa ➡</a>
             </div>
-            <p className="mb-3">
+            <p className="mb-3 font-normal text-base">
               Developed a highly efficient food delivery App including features
               like browsing, searching and filtering of restaurants. User can go
               through the items a particular restaurant is providing and can add
