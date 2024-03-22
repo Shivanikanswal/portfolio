@@ -20,7 +20,7 @@ const Body = () => {
           <div className="flex justify-around items-center">
             <div className=" text-4xl max-w-[700px] font-light font-sans">
               <div className=" mb-16">
-                <p className=" mb-6">Hello👋</p>
+                <p className=" mb-6s">Hello👋</p>
                 <p className=" leading-[3.2rem]">
                   I'm <span className=" font-semibold">Shivani Kanswal</span>, a
                   design minded front-end software engineer based in India,
@@ -55,7 +55,7 @@ const Body = () => {
         <div className=" font-light text-lg">
           <p className=" mb-3">
             I've had worked as an{" "}
-            <span className=" font-normal">Magento Developer</span> at{" "}
+            <span className=" font-normal">Software Engineer</span> at{" "}
             <span className=" font-normal">Infogain</span>, building things for
             the web with some awesome people. I graduated from{" "}
             <span className=" font-normal">Graphic Era Hill University </span>
