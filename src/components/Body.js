@@ -20,7 +20,7 @@ const Body = () => {
           <div className="flex justify-around items-center">
             <div className=" text-4xl max-w-[700px] font-light font-sans">
               <div className=" mb-16">
-                <p className=" mb-6s">Hello👋</p>
+                <p className=" mb-6">Hello👋</p>
                 <p className=" leading-[3.2rem]">
                   I'm <span className=" font-semibold">Shivani Kanswal</span>, a
                   design minded front-end software engineer based in India,
