@@ -11,6 +11,9 @@ import tailwindLogo from "../utils/media/tailwind-icon.png";
 import linuxLogo from "../utils/media/linux-icon.jpg";
 import lessIcon from "../utils/media/less-icon.png";
 import parcelIcon from "../utils/media/parcel-icon.png";
+import materialIcon from "../utils/media/material-icon.png";
+import nodeIcon from "../utils/media/node-icon.png";
+import mongodbIcon from "../utils/media/mongodb-icon.jpg";
 
 const Body = () => {
   return (
@@ -20,11 +23,14 @@ const Body = () => {
           <div className="flex justify-around items-center">
             <div className=" text-4xl max-w-[700px] font-light font-sans">
               <div className=" mb-16">
-                <p className=" mb-6">Hello👋</p>
+                <p className=" mb-6">
+                  Hello
+                  <span className="animate-waving-hand text-5xl">👋</span>
+                </p>
                 <p className=" leading-[3.2rem]">
                   I'm <span className=" font-semibold">Shivani Kanswal</span>, a
-                  design minded front-end software engineer based in India,
-                  focused on creating user-centric web applications.{" "}
+                  design minded Front-End Developer based in India, focused on
+                  creating user-centric web applications.{" "}
                 </p>
               </div>
               <div className="text-xl max-w-[700px] font-normal items-center">
@@ -54,10 +60,11 @@ const Body = () => {
         </div>
         <div className=" font-light text-lg">
           <p className=" mb-3">
-            I've had worked as an{" "}
-            <span className=" font-normal">Software Engineer</span> at{" "}
-            <span className=" font-normal">Infogain</span>, building things for
-            the web with some awesome people. I graduated from{" "}
+            I'm currently working as an{" "}
+            <span className=" font-normal">Frontend Web Developer</span> at{" "}
+            <span className=" font-normal">FinGuard Technologies</span>,
+            building things for the web with some awesome people. I graduated
+            from{" "}
             <span className=" font-normal">Graphic Era Hill University </span>
             after completing four year Computer science programme at Dehradun,
             India.
@@ -123,7 +130,26 @@ const Body = () => {
             </div>
             <div className="logocls">
               <img
+                src={materialIcon}
+                className="jquery h-28 w-36 grayscale hover:filter-none"
+              ></img>
+            </div>
+            <div className="logocls">
+              <img
+                src={nodeIcon}
+                className="jquery h-28 w-36 grayscale hover:filter-none"
+              ></img>
+            </div>
+
+            <div className="logocls">
+              <img
                 src={jQueryLogo}
+                className="jquery h-28 w-36 grayscale hover:filter-none"
+              ></img>
+            </div>
+            <div className="logocls">
+              <img
+                src={mongodbIcon}
                 className="jquery h-28 w-36 grayscale hover:filter-none"
               ></img>
             </div>
