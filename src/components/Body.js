@@ -25,7 +25,8 @@ const Body = () => {
               <div className=" mb-16">
                 <p className=" mb-6">
                   Hello
-                  <span className="animate-waving-hand text-5xl">👋</span>
+                  {/* <span className="animate-waving-hand text-5xl">👋</span> */}
+                  <span className="inline-block animate-wave origin-[70%_70%]">👋</span>
                 </p>
                 <p className=" leading-[3.2rem]">
                   I'm <span className=" font-semibold">Shivani Kanswal</span>, a
