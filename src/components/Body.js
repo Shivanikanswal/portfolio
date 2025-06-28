@@ -218,7 +218,7 @@ const Body = () => {
               </span>
             </div>
           </div>
-          <div className="project-2 mb-10">
+          {/* <div className="project-2 mb-10">
             <div className="project-name text-lg font-semibold mb-3 hover:underline">
               <a href="https://foodmaniaa.netlify.app/">Food Maniaa ➡</a>
             </div>
@@ -251,7 +251,7 @@ const Body = () => {
                 React Router
               </span>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>
