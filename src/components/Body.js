@@ -59,27 +59,26 @@ const Body = () => {
           BACKGROUND
         </div>
         <div className=" font-light text-lg">
-          <p className=" mb-3">
-            I'm currently working as an{" "}
-            <span className=" font-normal">Frontend Web Developer</span> at{" "}
-            <span className=" font-normal">FinGuard Technologies</span>,
-            building things for the web with some awesome people. I graduated
-            from{" "}
-            <span className=" font-normal">Graphic Era Hill University </span>
-            after completing four year Computer science programme at Dehradun,
-            India.
+          <p className="mb-3">
+            I'm currently working as a{" "}
+            <span className="font-normal">Frontend Developer</span> at{" "}
+            <span className="font-normal">Uniteam</span>, where I collaborate
+            with an amazing team to build thoughtful, high-quality web
+            experiences. I hold a degree in Computer Science from{" "}
+            <span className="font-normal">Graphic Era University</span> in
+            Dehradun, India.
           </p>
           <p className=" mb-3">
-            As a software engineer, I enjoy bridging the gap between engineering
-            and design — combining my technical knowledge with my keen eye for
-            design to create a beautiful product. My goal is to always build
-            applications that are scalable and efficient under the hood while
-            providing engaging, pixel-perfect user experiences.
+            As a software engineer, I love bridging the gap between engineering
+            and design — combining technical know-how with a sharp eye for
+            detail to craft intuitive and visually engaging user interfaces. My
+            goal is to build scalable, efficient applications that deliver
+            seamless, pixel-perfect experiences.
           </p>
           <p className=" mb-3">
-            When I'm not in front of a computer screen, I'm probably playing
-            badminton, experimenting in kitchen, or crossing off another item on
-            my bucket list.
+            When I’m not coding, you’ll probably find me on a badminton court,
+            experimenting in the kitchen, or checking off something new from my
+            bucket list.
           </p>
         </div>
       </section>
