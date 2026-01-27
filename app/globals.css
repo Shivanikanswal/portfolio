@@ -1,2 +1,37 @@
 @import "tailwindcss";
 
+.body {
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+.layout-animated-bg {
+  --c1: #fff;
+  --c2: #eaddf6;
+  --c3: transparent;
+
+  --s: 0.7; /* scale: 1 = original, 0.5 = half size */
+
+  --circle: var(--c3) calc(6px * var(--s)),
+    var(--c2) calc(7px * var(--s)) calc(8px * var(--s)),
+    var(--c3) calc(9px * var(--s)) calc(14px * var(--s)),
+    var(--c2) calc(15px * var(--s)) calc(16px * var(--s)),
+    var(--c3) calc(17px * var(--s)) calc(22px * var(--s)),
+    var(--c2) calc(23px * var(--s)) calc(24px * var(--s)),
+    transparent calc(25px * var(--s));
+
+  background: radial-gradient(
+      circle at calc(96px * var(--s)) calc(56px * var(--s)),
+      var(--circle)
+    ),
+    radial-gradient(circle at calc(96px * var(--s)) 0, var(--circle)),
+    radial-gradient(
+      circle at calc(48px * var(--s)) calc(28px * var(--s)),
+      var(--circle)
+    ),
+    radial-gradient(circle at 0 calc(56px * var(--s)), var(--circle)),
+    radial-gradient(circle at 0 0, var(--circle));
+
+  background-size: calc(96px * var(--s)) calc(56px * var(--s));
+  background-position: center;
+  background-color: var(--c1);
+}

@@ -1,15 +1,16 @@
 import Image from "next/image";
+import Home from "../components/sections/Home/Home";
+import Skills from "../components/sections/Skills";
+import WorkTimeline from "../components/sections/WorkTimeline";
+import Contact from "../components/sections/Contact";
 
-export default function Home() {
+export default function Page() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1>
-            Hello from here shivani kanswal!!
-          </h1>
-        </div>
-      </main>
+    <div>
+      <Home />
+      <Skills />
+      <WorkTimeline />
+      <Contact />
     </div>
   );
 }

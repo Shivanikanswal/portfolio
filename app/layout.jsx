@@ -1,31 +1,26 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { Inter } from "next/font/google";
+import Navbar from "../components/layout/Navbar";
+import Footer from "../components/layout/Footer";
 
 export const metadata = {
   title: "Shivani Kanswal Portfolio",
   description: "Portfolio of Shivani Kanswal",
 };
 
-export default function RootLayout({children}) {
-  return (
-    <html lang="en">
-      <head>
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  weight: ["200", "300", "400", "500"],
+});
 
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en" className={inter.variable}>
+      <body className={inter.className}>
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
