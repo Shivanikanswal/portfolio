@@ -24,7 +24,7 @@ const Navbar = () => {
       <nav className=" flex w-full py-4 shadow shadow-gray-200">
         <ul className="flex justify-between w-full px-3.5 text-neutral-700">
           <p className="icon">SHIVANI</p>
-          <div className="flex gap-4">
+          <div className="flex gap-6 text-[15px]">
             {navItems.map((item, index) => {
               return (
                 <Link href={item.link} key={index}>
