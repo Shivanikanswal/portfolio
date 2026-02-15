@@ -6,7 +6,7 @@
 
 .layout-animated-bg {
   --c1: #fff;
-  --c2: #eeedf1;
+  --c2: #f6f6f6;
   --c3: transparent;
 
   --s: 0.7; /* scale: 1 = original, 0.5 = half size */
@@ -34,6 +34,15 @@
   background-size: calc(96px * var(--s)) calc(56px * var(--s));
   background-position: center;
   background-color: var(--c1);
+}
+
+.worktimeline-bg {
+  background-image: radial-gradient(
+    circle,
+    rgb(229, 229, 229) 1px,
+    transparent 1px
+  );
+  background-size: 18px 18px;
 }
 .section-container {
   @apply box-border mx-auto;
