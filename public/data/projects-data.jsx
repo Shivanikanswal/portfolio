@@ -25,17 +25,14 @@ export const projectData = [
     github: "https://github.com/Shivanikanswal/sheets-clone",
     description: "sheets clone",
     tech: ["HTML", "CSS3", "JavaScript"],
-    image: [
-      "/utils/project/google-sheets.png",
-      "/utils/project/movieapp-3.png",
-    ],
+    image: ["/utils/project/google-sheets.png"],
   },
-  {
-    id: "3",
-    name: "Portfolio",
-    github: "https://github.com/Shivanikanswal/portfolio",
-    description: "new portfolio as part of learningn nextJs",
-    tech: ["", ""],
-    image: ["/utils/project/movieapp-1.png", "/utils/project/movieapp-2.png"],
-  },
+  // {
+  //   id: "3",
+  //   name: "Portfolio",
+  //   github: "https://github.com/Shivanikanswal/portfolio",
+  //   description: "new portfolio as part of learningn nextJs",
+  //   tech: ["", ""],
+  //   image: ["/utils/project/movieapp-1.png", "/utils/project/movieapp-2.png"],
+  // },
 ];

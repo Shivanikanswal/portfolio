@@ -1,11 +1,51 @@
-import Section from "../layout/SectionWrapper";
-const WorkTimeline = () => {
+"use client";
+
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+
+import "react-vertical-timeline-component/style.min.css";
+import { experiences } from "../../public/data/work-experience-data";
+
+export default function WorkTimeline() {
   return (
-    <div className="worktimeline-bg min-h-screen">
-      <Section id="work" className="">
-        <h2 className="text-4xl font-semibold">Work</h2>
-      </Section>
-    </div>
+    <section id="work" className="py-20 worktimeline-bg">
+      <div className="max-w-6xl mx-auto px-4">
+        <h2 className="text-4xl font-bold mb-16 text-center text-gray-800">
+          Work Experience
+        </h2>
+
+        <VerticalTimeline lineColor="#a47fc5">
+          {experiences.map((exp, index) => (
+            <VerticalTimelineElement
+              key={index}
+              date={exp.date}
+              iconStyle={{
+                background: "#eaddf6",
+                color: "#fff",
+              }}
+              contentStyle={{
+                background: "#eeedf1",
+                color: "#1f2937",
+                borderRadius: "16px",
+                boxShadow: "0 4px 20px rgba(0,0,0,0.05)",
+              }}
+              contentArrowStyle={{
+                borderRight: "7px solid #eeedf1",
+              }}
+            >
+              <h3 className="text-base font-semibold text-gray-800">
+                {exp.title}
+              </h3>
+              <h4 className="text-[#a47fc5] font-normal mb-2">{exp.company}</h4>
+              <p className="text-base! text-gray-600 font-normal! mt-0!">
+                {exp.description}
+              </p>
+            </VerticalTimelineElement>
+          ))}
+        </VerticalTimeline>
+      </div>
+    </section>
   );
-};
-export default WorkTimeline;
+}
