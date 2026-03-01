@@ -63,8 +63,8 @@ export default function ImageCarousel({ images }) {
                 src={img}
                 alt={`project-image-${i}`}
                 width={720}
-                height={800}
-                className="h-90 w-full rounded-xl object-cover"
+                height={600}
+                className="w-full rounded-xl object-cover"
                 draggable={false}
               />
             </div>

@@ -12,7 +12,7 @@ export default function WorkTimeline() {
   return (
     <section id="work" className="py-20 worktimeline-bg">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-16 text-center text-gray-800">
+        <h2 className="text-4xl font-bold mb-16 text-center text-neutral-500">
           Work Experience
         </h2>
 
@@ -39,9 +39,20 @@ export default function WorkTimeline() {
                 {exp.title}
               </h3>
               <h4 className="text-[#a47fc5] font-normal mb-2">{exp.company}</h4>
-              <p className="text-base! text-gray-600 font-normal! mt-0!">
-                {exp.description}
-              </p>
+              <div>
+                <ul className="pl-2.5">
+                  {Array.isArray(exp?.description) &&
+                    exp.description.length > 0 &&
+                    exp?.description?.map((itms, index) => (
+                      <li
+                        key={index}
+                        className="text-sm! text-gray-600 font-normal! mt-0! list-disc"
+                      >
+                        {itms}
+                      </li>
+                    ))}
+                </ul>
+              </div>
             </VerticalTimelineElement>
           ))}
         </VerticalTimeline>
