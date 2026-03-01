@@ -7,7 +7,7 @@ export const projectData = [
       "Developed an API-driven movie discovery app using React, featuring optimized component rendering, responsive UI, and dialog-based navigation for exploring movie details, trailers, cast credits, and actor filmographies.",
     tech: [
       "React.js",
-      "Tailwind CSS",
+      "TailwindCSS",
       "JavaScript",
       "HTML/CSS",
       "TMDB API",
@@ -33,12 +33,14 @@ export const projectData = [
     github: "https://github.com/Shivanikanswal/sheets-clone",
     live: "https://shivanikanswal.github.io/sheets-clone/",
   },
-  // {
-  //   id: "3",
-  //   name: "Portfolio",
-  //   github: "https://github.com/Shivanikanswal/portfolio",
-  //   description: "new portfolio as part of learningn nextJs",
-  //   tech: ["", ""],
-  //   image: ["/utils/project/movieapp-1.png", "/utils/project/movieapp-2.png"],
-  // },
+  {
+    id: "3",
+    name: "Portfolio",
+    github: "https://github.com/Shivanikanswal/portfolio",
+    description: "new portfolio as part of learningn nextJs",
+    tech: ["", ""],
+    image: ["/utils/project/movieapp-1.png", "/utils/project/movieapp-2.png"],
+    github: "https://github.com/Shivanikanswal/sheets-clone",
+    live: "https://shivanikanswal.github.io/sheets-clone/",
+  },
 ];

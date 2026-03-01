@@ -10,7 +10,7 @@ const Projects = () => {
       id="projects"
       className="px-6 py-10 sm:py-24 min-h-screen place-items-center"
     >
-      <section className="flex justify-center py-10 sm:py-24 px-6 w-full">
+      <section className="flex justify-center px-6 w-full">
         <div className="flex flex-col items-center mx-auto">
           <p className="text-2xl sm:text-5xl font-semibold text-neutral-600 mb-10">
             Projects
@@ -22,15 +22,15 @@ const Projects = () => {
                   key={item.id}
                   className="bg-white p-10 shadow-md hover:shadow-2xl rounded-2xl"
                 >
-                  <div className="grid grid-flow-row sm:grid-flow-col gap-4">
-                    <div className="rounded-xl w-175">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                    <div className="rounded-xl w-full md:max-w-[700px]">
                       <ImageCarousel images={item.image} />
                     </div>
                     <div className="flex gap-4 flex-col px-2">
-                      <h2 className="text-2xl font-bold text-black">
+                      <h2 className="text-lg sm:text-xl font-bold text-black">
                         {item.name}
                       </h2>
-                      <p className="text-neutral-500 text-base">
+                      <p className="text-neutral-500 text-sm sm:text-base">
                         {item.description}
                       </p>
                       <div className="flex flex-wrap gap-3.5">
@@ -38,7 +38,7 @@ const Projects = () => {
                           return (
                             <div
                               key={index}
-                              className="bg-[#eaddf6] rounded-2xl px-3 py-1 text-neutral-600 text-sm"
+                              className="bg-[#eaddf6] rounded-2xl px-3 py-1 text-neutral-600 text-xs sm:text-sm"
                             >
                               <span>{itm}</span>
                             </div>

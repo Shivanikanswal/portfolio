@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
-const SLIDE_WIDTH = 720;
+// const SLIDE_WIDTH = 720;
 const AUTO_DELAY = 2000;
 
 export default function ImageCarousel({ images }) {
@@ -40,11 +40,8 @@ export default function ImageCarousel({ images }) {
       <div className="overflow-hidden rounded-xl">
         <motion.div
           drag="x"
-          dragConstraints={{
-            left: -SLIDE_WIDTH * (images.length - 1),
-            right: 0,
-          }}
-          animate={{ x: -index * SLIDE_WIDTH }}
+          dragConstraints={{ left: 0, right: 0 }}
+          animate={{ x: `-${index * 100}%` }}
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
           className="flex"
           onDragStart={stopAutoScroll}
@@ -58,13 +55,13 @@ export default function ImageCarousel({ images }) {
           }}
         >
           {images.map((img, i) => (
-            <div key={i} className="min-w-180">
+            <div key={i} className="min-w-full">
               <Image
                 src={img}
                 alt={`project-image-${i}`}
                 width={720}
                 height={600}
-                className="w-full rounded-xl object-cover"
+                className="w-full h-auto rounded-xl"
                 draggable={false}
               />
             </div>
@@ -81,7 +78,7 @@ export default function ImageCarousel({ images }) {
               setIndex(i);
               startAutoScroll();
             }}
-            className={`h-2 w-2 rounded-full transition-all ${
+            className={`h-1 w-1 rounded-full transition-all ${
               index === i
                 ? "w-6 bg-neutral-800"
                 : "bg-neutral-300 hover:bg-neutral-400"
