@@ -55,13 +55,17 @@ const AnimationLayout = () => {
   return (
     <div className="layout-animated-bg flex-1 pt-10 sm:pt-12">
       <Section className="flex flex-col">
-        <div className="w-40 h-40 bg-[#eeedf1] rounded-2xl items-center translate-x-32.5 p-3">
-          <pre className=" code-snippet text-[0.80rem] text-neutral-500 whitespace-pre-wrap ">
-            {codeSnippetUi}
-          </pre>
+        <div className="translate-y-10">
+          <div className="w-40 h-40 bg-[#4e4e55] rounded-3xl items-center translate-x-54.5 p-3">
+            <pre className="code-snippet text-[0.80rem] text-neutral-50 whitespace-pre-wrap ">
+              {codeSnippetUi}
+            </pre>
+          </div>
+          <div className="bg-[#4e4e55] w-6 h-6 rounded-4xl translate-x-50.5 mt-1.5"></div>
+          <div className="bg-[#4e4e55] w-4 h-4 rounded-4xl translate-x-48.5 mt-1.5"></div>
         </div>
         <Image
-          className=" opacity-100 shadow-b-sm"
+          className=" opacity-100 shadow-b-sm mr-20"
           src="/utils/code-animated-girl.png"
           alt="Picture of the author"
           width={300}

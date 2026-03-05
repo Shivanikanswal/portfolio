@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 
@@ -14,9 +15,15 @@ const inter = Inter({
   weight: ["200", "300", "400", "500"],
 });
 
+export const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-montserrat",
+});
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={`${inter.variable} ${montserrat.variable}`}>
       <body className={inter.className}>
         <Navbar />
         <main>{children}</main>

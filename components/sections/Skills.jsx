@@ -19,7 +19,7 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.45 }}
-          className=" text-2xl sm:text-5xl font-semibold text-neutral-500"
+          className="skill-heading text-2xl sm:text-5xl font-semibold text-neutral-500"
         >
           {" "}
           Tools and Technologies{" "}
@@ -47,7 +47,7 @@ const Skills = () => {
                 key={index}
                 className="flex flex-col gap-3 p-2 items-center"
               >
-                <div className="w-16 h-16 rounded-lg bg-white p-2 shadow-sm">
+                <div className="w-16 h-16 rounded-lg bg-white p-2 shadow-sm shadow-[#e6dee9]">
                   <Image
                     src={item.logo}
                     alt="skills-logo"
@@ -55,7 +55,7 @@ const Skills = () => {
                     height={56}
                   />
                 </div>
-                <p className=" text-xs sm:text-sm font-bold text-gray-700 tracking-wider">
+                <p className="text-xs sm:text-sm font-bold text-gray-700 tracking-wider">
                   {item.name}
                 </p>
               </motion.div>

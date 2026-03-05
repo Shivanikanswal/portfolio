@@ -12,7 +12,7 @@ const Projects = () => {
     >
       <section className="flex justify-center px-6 w-full">
         <div className="flex flex-col items-center mx-auto">
-          <p className="text-2xl sm:text-5xl font-semibold text-neutral-600 mb-10">
+          <p className="project-heading text-2xl sm:text-5xl font-semibold text-neutral-600 mb-10">
             Projects
           </p>
           <div className="space-y-14">
@@ -23,11 +23,11 @@ const Projects = () => {
                   className="bg-white p-10 shadow-md hover:shadow-2xl rounded-2xl"
                 >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-                    <div className="rounded-xl w-full md:max-w-[700px]">
+                    <div className="rounded-xl w-full md:max-w-175">
                       <ImageCarousel images={item.image} />
                     </div>
                     <div className="flex gap-4 flex-col px-2">
-                      <h2 className="text-lg sm:text-xl font-bold text-black">
+                      <h2 className="project-sub-heading text-lg sm:text-xl font-bold text-black">
                         {item.name}
                       </h2>
                       <p className="text-neutral-500 text-sm sm:text-base">
@@ -38,7 +38,7 @@ const Projects = () => {
                           return (
                             <div
                               key={index}
-                              className="bg-[#eaddf6] rounded-2xl px-3 py-1 text-neutral-600 text-xs sm:text-sm"
+                              className="bg-[#deecdd] rounded-2xl px-3 py-1 text-neutral-600 text-xs sm:text-sm"
                             >
                               <span>{itm}</span>
                             </div>

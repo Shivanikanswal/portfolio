@@ -12,17 +12,17 @@ export default function WorkTimeline() {
   return (
     <section id="work" className="py-20 worktimeline-bg">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-16 text-center text-neutral-500">
+        <h2 className="work-heading text-5xl font-bold mb-16 text-center text-neutral-500">
           Work Experience
         </h2>
 
-        <VerticalTimeline lineColor="#a47fc5">
+        <VerticalTimeline lineColor="#8cb390">
           {experiences.map((exp, index) => (
             <VerticalTimelineElement
               key={index}
               date={exp.date}
               iconStyle={{
-                background: "#eaddf6",
+                background: "#c1dfc4",
                 color: "#fff",
               }}
               contentStyle={{
@@ -38,7 +38,7 @@ export default function WorkTimeline() {
               <h3 className="text-base font-semibold text-gray-800">
                 {exp.title}
               </h3>
-              <h4 className="text-[#a47fc5] font-normal mb-2">{exp.company}</h4>
+              <h4 className="text-[#8cb390] font-normal mb-2">{exp.company}</h4>
               <div>
                 <ul className="pl-2.5">
                   {Array.isArray(exp?.description) &&

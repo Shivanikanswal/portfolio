@@ -4,9 +4,35 @@
   font-family: var(--font-inter), system-ui, sans-serif;
 }
 
+.hero,
+.skill-heading,
+.project-heading,
+.work-heading {
+  font-family: var(--font-montserrat);
+  font-weight: 700;
+}
+
+.nav-items {
+  font-family: var(--font-montserrat);
+  font-weight: 700;
+}
+
+.icon,
+.project-sub-heading {
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+}
+
+.code-snippet {
+  font-family: var(--font-montserrat);
+  font-weight: 400;
+  font-size: 13px;
+}
+
 .layout-animated-bg {
   --c1: #fff;
-  --c2: #f6f6f6;
+  /* --c2: #f6f6f6; */
+  --c2: #f6eeee;
   --c3: transparent;
 
   --s: 0.7; /* scale: 1 = original, 0.5 = half size */

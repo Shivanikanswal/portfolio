@@ -17,4 +17,10 @@ export const HomeData = [
     href: "mailto:shivanikanswal@gmail.com",
     icon: "/utils/home/email.svg",
   },
+  {
+    id: "download",
+    label: "Resume",
+    href: "https://drive.google.com/file/d/1J7ukDVZsOg7CL3wATP7odF-LZ96XSxFF/view?usp=sharing",
+    icon: "/utils/home/download.svg",
+  },
 ];

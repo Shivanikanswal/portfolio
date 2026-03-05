@@ -25,10 +25,10 @@ const Navbar = () => {
   ];
   return (
     <>
-      <nav className=" flex w-full py-4 shadow shadow-gray-200">
+      <nav className="flex w-full py-4 shadow shadow-gray-300">
         <ul className="flex justify-between w-full px-3.5 text-neutral-700">
           <p className="icon">SHIVANI</p>
-          <div className="flex gap-6 text-[15px]">
+          <div className="nav-items flex gap-6 text-[14px] font-semibold">
             {navItems.map((item, index) => {
               return (
                 <Link href={item.link} key={index}>
