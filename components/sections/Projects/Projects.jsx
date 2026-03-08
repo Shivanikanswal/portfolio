@@ -1,8 +1,8 @@
-import Image from "next/image";
-import Section from "../../layout/SectionWrapper";
+"use client";
 import { projectData } from "../../../public/data/projects-data";
 import ImageCarousel from "./ImageCarousel";
 import Link from "next/link";
+import { easeInOut, motion } from "motion/react";
 
 const Projects = () => {
   return (
@@ -18,9 +18,13 @@ const Projects = () => {
           <div className="space-y-14">
             {projectData.map((item) => {
               return (
-                <div
+                <motion.div
                   key={item.id}
-                  className="bg-white p-10 shadow-md hover:shadow-2xl rounded-2xl"
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: item.id * 0.1 }}
+                  whileHover={{ scale: 1.02 }}
+                  className="bg-white p-10 shadow-md hover:shadow-2xl rounded-2xl border border-[#f3f3f3]"
                 >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                     <div className="rounded-xl w-full md:max-w-175">
@@ -63,7 +67,7 @@ const Projects = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
           </div>

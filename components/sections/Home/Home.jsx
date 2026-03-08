@@ -2,19 +2,13 @@ import Link from "next/link";
 import Section from "../../layout/SectionWrapper";
 import AnimationLayout from "./components/AnimationLayout";
 import { HomeData } from "../../../public/data/home-data";
-// import bgImage from "/public/utils/home/doodle.jpg";
-import { it } from "node:test";
 import Image from "next/image";
 const Home = () => {
   return (
     <div
       className=" flex flex-col justify-between pt-10 sm:pt-24 min-h-screen gap-10 sm:gap-24 text-neutral-700"
       style={{
-        background: "linear-gradient(-225deg, #c1dfc4 -20%, #deecdd 40%)", // green
-        // background: "linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%)", //52
-        // backgroundImage: "url('/utils/home/doodle.jpg')",
-        // backgroundSize: "cover",
-        // opacity: 0.1,
+        background: "linear-gradient(-225deg, #c1dfc4 -20%, #deecdd 40%)",
       }}
     >
       <Section id="home" className="flex-1">
@@ -33,8 +27,6 @@ const Home = () => {
             ></span>
           </div>
           <p className="text-[15px]">
-            {/* A design minded Frontend Developer, focused on building fast,
-            scalable, and user-friendly Web Applications. */}
             A frontend engineer driven by curiosity and clean design, building
             intuitive user interfaces with React and Next.js and engineering
             scalable solutions that power intelligent, AI-driven products.
