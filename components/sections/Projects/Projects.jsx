@@ -3,6 +3,7 @@ import { projectData } from "../../../public/data/projects-data";
 import ImageCarousel from "./ImageCarousel";
 import Link from "next/link";
 import { easeInOut, motion } from "motion/react";
+import Image from "next/image";
 
 const Projects = () => {
   return (
@@ -23,7 +24,7 @@ const Projects = () => {
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: item.id * 0.1 }}
-                  whileHover={{ scale: 1.02 }}
+                  // whileHover={{ scale: 1.0 }}
                   className="bg-white p-10 shadow-md hover:shadow-2xl rounded-2xl border border-[#f3f3f3]"
                 >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -37,32 +38,44 @@ const Projects = () => {
                       <p className="text-neutral-500 text-sm sm:text-base">
                         {item.description}
                       </p>
-                      <div className="flex flex-wrap gap-3.5">
+                      <div className="flex flex-wrap gap-3.5 my-2">
                         {item.tech.map((itm, index) => {
                           return (
                             <div
                               key={index}
-                              className="bg-[#deecdd] rounded-2xl px-3 py-1 text-neutral-600 text-xs sm:text-sm"
+                              className="bg-gradient-to-r from-[#DAD299] via-[#B0DAB9] to-[#DAD299] rounded-2xl px-3 py-1 text-neutral-600 text-xs sm:text-sm shadow-md hover:scale-110 transition-all duration-300"
                             >
                               <span>{itm}</span>
                             </div>
                           );
                         })}
                       </div>
-                      <div className="flex gap-5 text-neutral-500 cursor-pointer ">
-                        <Link
-                          href={item.live}
-                          target="_blank"
-                          className="border-b-2"
-                        >
-                          Live
-                        </Link>
+                      <div className="flex gap-6 text-neutral-700 cursor-pointer ">
                         <Link
                           href={item.github}
                           target="_blank"
-                          className="border-b-2"
+                          className="border-b-2 flex items-center gap-1 hover:scale-110 transition-all duration-300 pb-0.5"
                         >
-                          Github
+                          <Image
+                            src={item.gitIcon}
+                            width={22}
+                            height={22}
+                            alt={"code"}
+                          />
+                          View Code
+                        </Link>
+                        <Link
+                          href={item.live}
+                          target="_blank"
+                          className="border-b-2 flex items-center gap-1 hover:scale-110 transition-all duration-300 pb-0.5"
+                        >
+                          <Image
+                            src={item.linkIcon}
+                            width={16}
+                            height={16}
+                            alt={"live"}
+                          />
+                          Live Demo
                         </Link>
                       </div>
                     </div>

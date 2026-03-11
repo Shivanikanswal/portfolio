@@ -53,6 +53,7 @@ export default function ImageCarousel({ images }) {
             }
             startAutoScroll();
           }}
+          whileHover={{ scale: 1.02 }}
         >
           {images.map((img, i) => (
             <div key={i} className="min-w-full">
@@ -63,6 +64,7 @@ export default function ImageCarousel({ images }) {
                 height={600}
                 className="w-full h-auto rounded-xl"
                 draggable={false}
+                objectFit="cover"
               />
             </div>
           ))}
