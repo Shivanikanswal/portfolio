@@ -7,6 +7,7 @@ import {
 
 import "react-vertical-timeline-component/style.min.css";
 import { experiences } from "../../public/data/work-experience-data";
+import Link from "next/link";
 
 export default function WorkTimeline() {
   return (
@@ -16,7 +17,7 @@ export default function WorkTimeline() {
           Work Experience
         </h2>
 
-        <VerticalTimeline lineColor="#8cb390">
+        <VerticalTimeline lineColor="#3E5F4B">
           {experiences.map((exp, index) => (
             <VerticalTimelineElement
               key={index}
@@ -38,7 +39,15 @@ export default function WorkTimeline() {
               <h3 className="text-base font-semibold text-gray-800">
                 {exp.title}
               </h3>
-              <h4 className="text-[#8cb390] font-normal mb-2">{exp.company}</h4>
+              <h4>
+                <Link
+                  href={exp.website}
+                  target="_blank"
+                  className="text-[#59985f] font-normal mb-2 hover:text-yellow-600"
+                >
+                  {exp.company}
+                </Link>
+              </h4>
               <div>
                 <ul className="pl-2.5">
                   {Array.isArray(exp?.description) &&

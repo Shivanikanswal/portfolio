@@ -23,7 +23,11 @@ const Projects = () => {
                   key={item.id}
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: item.id * 0.1 }}
+                  transition={{
+                    duration: 1.2,
+                    ease: "easeOut",
+                    delay: item.id * 0.1,
+                  }}
                   // whileHover={{ scale: 1.0 }}
                   className="bg-white p-10 shadow-md hover:shadow-2xl rounded-2xl border border-[#f3f3f3]"
                 >

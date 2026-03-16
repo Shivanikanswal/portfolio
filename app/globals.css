@@ -7,7 +7,8 @@
 .hero,
 .skill-heading,
 .project-heading,
-.work-heading {
+.work-heading,
+.contact-heading {
   font-family: var(--font-montserrat);
   font-weight: 700;
 }
@@ -23,6 +24,10 @@
   font-weight: 600;
 }
 
+.contact-me {
+  font-family: var(--font-montserrat);
+  font-weight: 700;
+}
 .code-snippet {
   font-family: var(--font-montserrat);
   font-weight: 400;

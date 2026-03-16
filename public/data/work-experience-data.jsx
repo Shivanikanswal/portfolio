@@ -2,6 +2,7 @@ export const experiences = [
   {
     title: "Frontend Developer",
     company: "UniTeam",
+    website: "https://www.uniteamexp.com/",
     date: "2024 - 2025",
     description: [
       "Built scalable cross-platform features using React & TypeScript.",
@@ -13,6 +14,7 @@ export const experiences = [
   {
     title: "Frontend Developer",
     company: "Finguard Technologies",
+    website: "https://www.linkedin.com/company/finguardtechnologies/",
     date: "2024 - 2024",
     description: [
       "Built and shipped core features for a multi-user expense tracking app using the MERN stack.",
@@ -23,6 +25,7 @@ export const experiences = [
   {
     title: "Software Engineer",
     company: "Infogain",
+    website: "https://www.infogain.com/",
     date: "2022 - 2023",
     description: [
       "Promoted to Software Engineer, built and customized apps using React & PHP.",
@@ -33,6 +36,7 @@ export const experiences = [
   {
     title: "Software Engineer Trainee",
     company: "Infogain",
+    website: "https://www.infogain.com/",
     date: "2021 - 2022",
     description: [
       "Collaborated on debugging and optimizing modules to improve stability.",

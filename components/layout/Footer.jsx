@@ -1,4 +1,10 @@
+import Section from "./SectionWrapper";
+
 const Footer = () => {
-  return <div className="m-6 p-3 items-center">{/* <p>Back to top</p> */}</div>;
+  return (
+    <Section>
+      {/* <div className="bg-amber-400 text-amber-50">Content here</div> */}
+    </Section>
+  );
 };
 export default Footer;
