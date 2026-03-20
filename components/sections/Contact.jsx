@@ -4,17 +4,13 @@ import Image from "next/image";
 import { HomeData } from "../../public/data/home-data";
 const Contact = () => {
   return (
-    <section className="py-16 sm:py-20 px-6 sm:px-8 bg-white">
-      <div className="max-w-5xl mx-auto">
+    <section className="py-16 sm:py-20 px-6 sm:px-8 bg-gradient-to-br from-gray-50 to-white ">
+      <div className="max-w-5xl mx-auto flex flex-col gap-4 sm:gap-18">
         {/* Heading */}
-        <div className="mb-10 sm:mb-14">
-          <h2 className="contact-heading text-3xl sm:text-5xl font-bold text-neutral-600 mb-3">
+        <div className=" place-items-center">
+          <h2 className="contact-heading text-3xl sm:text-5xl font-bold text-neutral-600 mb-3 bg-gradient-to-r from-[#2D2A4A] to-[#6C63FF] bg-clip-text text-transparent">
             Let's Work Together
           </h2>
-          <p className="text-gray-600 max-w-xl">
-            Have a project idea or opportunity? Feel free to reach out or send
-            me a message below.
-          </p>
         </div>
 
         {/* Contact + Form Wrapper */}
@@ -24,9 +20,13 @@ const Contact = () => {
             <h3 className="contact-me text-lg sm:text-xl text-gray-800">
               Get in Touch
             </h3>
+            <p className="text-gray-600 max-w-xl text-sm">
+              Have a project idea or opportunity? Feel free to reach out or send
+              me a message below.
+            </p>
             <a
               href="mailto:yourmail@gmail.com"
-              className="flex items-center gap-4 p-4 rounded-xl border border-gray-200 hover:border-green-500 hover:bg-green-50 transition"
+              className="flex items-center gap-4 p-4 rounded-xl border border-gray-200 hover:border-blue-700 hover:bg-blue-100 transition"
             >
               <span>📩</span>
               <div className="flex flex-col text-sm">
@@ -35,7 +35,7 @@ const Contact = () => {
               </div>
             </a>
 
-            <div className="flex items-center gap-4 p-4 rounded-xl border border-gray-200 hover:border-green-500 hover:bg-green-50 transition cursor-pointer">
+            <div className="flex items-center gap-4 p-4 rounded-xl border border-gray-200 hover:border-blue-700 hover:bg-blue-100 transition cursor-pointer">
               <span>📍</span>
               <div className="flex flex-col text-sm">
                 <span className="text-gray-800 font-medium">Location</span>
@@ -74,24 +74,24 @@ const Contact = () => {
               <input
                 type="text"
                 placeholder="Enter your full name"
-                className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-sm"
+                className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm"
               />
 
               <input
                 type="email"
                 placeholder="your.email@example.com"
-                className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-sm"
+                className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm"
               />
 
               <textarea
                 rows="4"
                 placeholder="Tell me about your project, requirements and timeline."
-                className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-sm"
+                className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm"
               />
 
               <button
                 type="submit"
-                className="  bg-[#3E5F4B] text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition"
+                className="  bg-[#3E5F4B] text-white py-3 rounded-lg font-semibold bg-gradient-to-r from-blue-400 to-purple-400 hover:from-blue-600 hover:to-purple-600 transition"
               >
                 Send Message
               </button>

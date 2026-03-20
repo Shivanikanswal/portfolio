@@ -2,7 +2,7 @@
 import { projectData } from "../../../public/data/projects-data";
 import ImageCarousel from "./ImageCarousel";
 import Link from "next/link";
-import { easeInOut, motion } from "motion/react";
+import { motion } from "motion/react";
 import Image from "next/image";
 
 const Projects = () => {
@@ -47,7 +47,7 @@ const Projects = () => {
                           return (
                             <div
                               key={index}
-                              className="bg-gradient-to-r from-[#DAD299] via-[#B0DAB9] to-[#DAD299] rounded-2xl px-3 py-1 text-neutral-600 text-xs sm:text-sm shadow-md hover:scale-110 transition-all duration-300"
+                              className="bg-gradient-to-r from-blue-100 to-purple-100 rounded-2xl px-3 py-1 text-blue-800 text-xs sm:text-sm font-semibold shadow-sm hover:shadow-md hover:scale-110 transition-all duration-300 border border-blue-200/50"
                             >
                               <span>{itm}</span>
                             </div>

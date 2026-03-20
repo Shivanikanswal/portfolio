@@ -1,3 +1,75 @@
+// "use client";
+
+// import {
+//   VerticalTimeline,
+//   VerticalTimelineElement,
+// } from "react-vertical-timeline-component";
+
+// import "react-vertical-timeline-component/style.min.css";
+// import { experiences } from "../../public/data/work-experience-data";
+// import Link from "next/link";
+
+// export default function WorkTimeline() {
+//   return (
+//     <section id="work" className="py-20 worktimeline-bg">
+//       <div className="max-w-6xl mx-auto px-4">
+//         <h2 className="work-heading text-5xl font-bold mb-16 text-center text-neutral-500">
+//           Work Experience
+//         </h2>
+
+//         <VerticalTimeline lineColor="#3E5F4B">
+//           {experiences.map((exp, index) => (
+//             <VerticalTimelineElement
+//               key={index}
+//               date={exp.date}
+//               iconStyle={{
+//                 background: "linear-gradient(to right, #dbeafe, #f3e8ff)",
+//                 color: "#fff",
+//               }}
+//               contentStyle={{
+//                 background: "#eeedf1",
+//                 color: "#1f2937",
+//                 borderRadius: "16px",
+//                 boxShadow: "0 4px 20px rgba(0,0,0,0.05)",
+//               }}
+//               contentArrowStyle={{
+//                 borderRight: "7px solid #eeedf1",
+//               }}
+//             >
+//               <h3 className="text-base font-semibold text-gray-800">
+//                 {exp.title}
+//               </h3>
+//               <h4>
+//                 <Link
+//                   href={exp.website}
+//                   target="_blank"
+//                   className="text-blue-800 font-semibold mb-2"
+//                 >
+//                   {exp.company}
+//                 </Link>
+//               </h4>
+//               <div>
+//                 <ul className="pl-2.5">
+//                   {Array.isArray(exp?.description) &&
+//                     exp.description.length > 0 &&
+//                     exp?.description?.map((itms, index) => (
+//                       <li
+//                         key={index}
+//                         className="text-sm! text-gray-600 font-normal! mt-0! list-disc"
+//                       >
+//                         {itms}
+//                       </li>
+//                     ))}
+//                 </ul>
+//               </div>
+//             </VerticalTimelineElement>
+//           ))}
+//         </VerticalTimeline>
+//       </div>
+//     </section>
+//   );
+// }
+
 "use client";
 
 import {
@@ -9,62 +81,137 @@ import "react-vertical-timeline-component/style.min.css";
 import { experiences } from "../../public/data/work-experience-data";
 import Link from "next/link";
 
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useMotionValueEvent,
+} from "framer-motion";
+import { useRef, useState } from "react";
+
 export default function WorkTimeline() {
+  const timelineRef = useRef(null);
+
+  // 🔥 Scroll tracking
+  const { scrollYProgress } = useScroll({
+    target: timelineRef,
+    offset: ["start center", "end end"],
+  });
+
+  // 🔒 Lock when fully completed
+  const [locked, setLocked] = useState(false);
+
+  useMotionValueEvent(scrollYProgress, "change", (v) => {
+    if (v >= 1) setLocked(true);
+  });
+
+  // ✅ Correct progress pipeline
+  const rawProgress = useTransform(scrollYProgress, (v) => (locked ? 1 : v));
+
+  const height = useTransform(rawProgress, [0, 1], ["0%", "100%"]);
+
   return (
-    <section id="work" className="py-20 worktimeline-bg">
+    <section id="work" className="py-16 md:py-20 worktimeline-bg">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="work-heading text-5xl font-bold mb-16 text-center text-neutral-500">
+        <h2 className="work-heading text-3xl md:text-5xl font-bold mb-12 md:mb-16 text-center text-neutral-500">
           Work Experience
         </h2>
 
-        <VerticalTimeline lineColor="#3E5F4B">
-          {experiences.map((exp, index) => (
-            <VerticalTimelineElement
-              key={index}
-              date={exp.date}
-              iconStyle={{
-                background: "#c1dfc4",
-                color: "#fff",
-              }}
-              contentStyle={{
-                background: "#eeedf1",
-                color: "#1f2937",
-                borderRadius: "16px",
-                boxShadow: "0 4px 20px rgba(0,0,0,0.05)",
-              }}
-              contentArrowStyle={{
-                borderRight: "7px solid #eeedf1",
-              }}
-            >
-              <h3 className="text-base font-semibold text-gray-800">
-                {exp.title}
-              </h3>
-              <h4>
-                <Link
-                  href={exp.website}
-                  target="_blank"
-                  className="text-[#59985f] font-normal mb-2 hover:text-yellow-600"
-                >
-                  {exp.company}
-                </Link>
-              </h4>
-              <div>
-                <ul className="pl-2.5">
-                  {Array.isArray(exp?.description) &&
-                    exp.description.length > 0 &&
-                    exp?.description?.map((itms, index) => (
-                      <li
-                        key={index}
-                        className="text-sm! text-gray-600 font-normal! mt-0! list-disc"
+        <div ref={timelineRef} className="relative">
+          {/* Background line */}
+          <div className="absolute left-1/2 -translate-x-1/2 top-0 w-[3px] h-full bg-gray-200 rounded" />
+
+          {/* Animated gradient line */}
+          <motion.div
+            style={{ height }}
+            className="absolute left-1/2 -translate-x-1/2 top-0 w-[3px] rounded"
+          >
+            <div className="w-full h-full bg-gradient-to-b from-blue-600 via-purple-500 to-pink-500" />
+          </motion.div>
+
+          <VerticalTimeline lineColor="transparent">
+            {experiences.map((exp, index) => {
+              // 🎯 Trigger per item
+              const trigger = (index + 0.5) / experiences.length;
+
+              // ✅ MUST use rawProgress here
+              const scale = useTransform(
+                rawProgress,
+                [trigger - 0.1, trigger],
+                [0.8, 1]
+              );
+
+              const opacity = useTransform(
+                rawProgress,
+                [trigger, trigger + 0.05],
+                [0, 1]
+              );
+
+              return (
+                <VerticalTimelineElement
+                  key={index}
+                  date={exp.date}
+                  icon={
+                    <div className="relative flex items-center justify-center">
+                      {/* Circle */}
+                      <motion.div
+                        style={{ scale }}
+                        className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-r from-blue-200 to-purple-200"
+                      />
+
+                      {/* Tick */}
+                      <motion.div
+                        style={{ opacity, scale }}
+                        className="absolute text-blue-700 text-xs md:text-sm font-bold"
                       >
-                        {itms}
-                      </li>
-                    ))}
-                </ul>
-              </div>
-            </VerticalTimelineElement>
-          ))}
-        </VerticalTimeline>
+                        ✓
+                      </motion.div>
+                    </div>
+                  }
+                  iconStyle={{
+                    background: "transparent",
+                    boxShadow: "none",
+                  }}
+                  contentStyle={{
+                    background: "#eeedf1",
+                    color: "#1f2937",
+                    borderRadius: "16px",
+                    boxShadow: "0 4px 20px rgba(0,0,0,0.05)",
+                  }}
+                  contentArrowStyle={{
+                    borderRight: "7px solid #eeedf1",
+                  }}
+                >
+                  <h3 className="text-sm md:text-base font-semibold text-gray-800">
+                    {exp.title}
+                  </h3>
+
+                  <h4>
+                    <Link
+                      href={exp.website}
+                      target="_blank"
+                      className="text-blue-800 font-semibold mb-2 text-sm md:text-base"
+                    >
+                      {exp.company}
+                    </Link>
+                  </h4>
+
+                  <ul className="pl-4">
+                    {Array.isArray(exp?.description) &&
+                      exp.description.map((item, i) => (
+                        <li
+                          key={i}
+                          className="text-xs md:text-sm text-gray-600 mt-1 list-disc"
+                        >
+                          {item}
+                        </li>
+                      ))}
+                  </ul>
+                </VerticalTimelineElement>
+              );
+            })}
+          </VerticalTimeline>
+        </div>
       </div>
     </section>
   );

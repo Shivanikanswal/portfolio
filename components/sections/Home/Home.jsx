@@ -10,7 +10,7 @@ const Home = () => {
     <div
       className=" flex flex-col justify-between pt-10 sm:pt-24 min-h-screen gap-10 sm:gap-24 text-neutral-700"
       style={{
-        background: "linear-gradient(-225deg, #c1dfc4 -20%, #deecdd 40%)",
+        background: "radial-gradient(#c3c3ff, #fff)",
       }}
     >
       <Section id="home" className="flex-1">
@@ -25,7 +25,7 @@ const Home = () => {
           </motion.p>
           <div className="hero flex items-end text-6xl gap-1.5">
             <motion.p
-              className="text-neutral-600 font-semibold"
+              className="text-neutral-600 font-semibold drop-shadow-2xl"
               style={{ opacity: 0.9, transform: "none" }}
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
