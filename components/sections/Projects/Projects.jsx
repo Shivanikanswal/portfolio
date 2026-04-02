@@ -9,10 +9,11 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className="px-6 py-10 sm:py-24 min-h-screen place-items-center"
+      className="relative px-6 py-10 sm:py-24 min-h-screen place-items-center overflow-x-hidden"
     >
-      <section className="flex justify-center px-6 w-full">
-        <div className="flex flex-col items-center mx-auto">
+      <div className="absolute  top-0 right-0 z-0 rounded-full bg-[#f8ebff] w-40 h-40 sm:w-96 sm:h-96 translate-x-1/2 -translate-y-6/12"></div>
+      <section className="relative flex justify-center px-6 w-full">
+        <div className="flex flex-col items-center mx-auto z-10">
           <p className="project-heading text-2xl sm:text-5xl font-semibold text-neutral-600 mb-10">
             Projects
           </p>
@@ -90,6 +91,7 @@ const Projects = () => {
           </div>
         </div>
       </section>
+      <div className="absolute bottom-0 left-0 z-0 rounded-full bg-[#d7e2f7] w-40 h-40 sm:w-96 sm:h-96 -translate-y-6/12 -translate-x-6/12"></div>
     </div>
   );
 };

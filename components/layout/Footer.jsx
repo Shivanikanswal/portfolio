@@ -2,8 +2,8 @@ import Section from "./SectionWrapper";
 
 const Footer = () => {
   return (
-    <Section>
-      {/* <div className="bg-amber-400 text-amber-50">Content here</div> */}
+    <Section className=" w-full">
+      <div className="flex flex-col gap-0"></div>
     </Section>
   );
 };

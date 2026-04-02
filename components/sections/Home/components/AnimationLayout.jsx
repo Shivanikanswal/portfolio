@@ -53,7 +53,7 @@ const AnimationLayout = () => {
   }, []);
 
   return (
-    <div className="layout-animated-bg flex-1 pt-10 sm:pt-12">
+    <div className="layout-animated-bg flex-1 pt-10 sm:pt-12 z-20">
       <Section className="flex flex-col">
         <div className="translate-y-10">
           <div className="w-40 h-40 bg-[#30303d] rounded-3xl items-center translate-x-54.5 p-3">

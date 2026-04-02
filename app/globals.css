@@ -37,7 +37,7 @@
 .layout-animated-bg {
   --c1: #fff;
   /* --c2: #f6f6f6; */
-  --c2: #f6eeee;
+  --c2: #efeeff;
   --c3: transparent;
 
   --s: 0.7; /* scale: 1 = original, 0.5 = half size */

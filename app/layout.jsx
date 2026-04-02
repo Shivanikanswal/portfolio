@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { Montserrat } from "next/font/google";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
+import BackToTop from "../components/ui/BackToTop";
 
 export const metadata = {
   title: "Shivani Kanswal Portfolio",
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${inter.variable} ${montserrat.variable}`}>
       <body className={inter.className}>
         <Navbar />
+        <BackToTop />
         <main>{children}</main>
         <Footer />
       </body>

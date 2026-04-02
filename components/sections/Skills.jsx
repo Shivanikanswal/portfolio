@@ -11,9 +11,9 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="flex justify-center py-10 sm:py-24 px-6 w-full bg-neutral-50"
+      className="relative flex justify-center py-10 sm:py-24 px-6 w-full bg-neutral-50 z-12"
     >
-      <div className="flex flex-col gap-18 max-w-6xl mx-auto items-center">
+      <div className="flex flex-col gap-18 max-w-6xl mx-auto items-center z-10">
         <motion.p
           initial={{ opacity: 0, y: 8 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -63,6 +63,8 @@ const Skills = () => {
           })}
         </motion.div>
       </div>
+      <div className="absolute top-0 left-0 rounded-full bg-[#dbdbf8] w-40 h-40 sm:w-96 sm:h-96 -translate-x-6/12 -translate-y-6/12"></div>
+      {/* <div className="absolute bottom-0 right-0 rounded-full bg-[#f8ebff] w-40 h-40 sm:w-90 sm:h-90 translate-x-6/12 translate-y-6/12"></div> */}
     </section>
   );
 };
