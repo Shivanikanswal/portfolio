@@ -23,7 +23,7 @@ const Home = () => {
           >
             Hi, I am
           </motion.p>
-          <div className="hero flex items-end text-6xl gap-1.5">
+          <div className="hero flex items-end text-5xl md:text-6xl gap-1.5">
             <motion.p
               className="text-neutral-600 font-semibold drop-shadow-2xl"
               style={{ opacity: 0.9, transform: "none" }}

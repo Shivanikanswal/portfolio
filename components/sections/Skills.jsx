@@ -19,7 +19,7 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.45 }}
-          className="skill-heading text-2xl sm:text-5xl font-semibold text-neutral-500"
+          className="skill-heading text-3xl sm:text-5xl font-semibold text-neutral-500"
         >
           {" "}
           Tools and Technologies{" "}
