@@ -4,11 +4,11 @@ import Image from "next/image";
 import { HomeData } from "../../public/data/home-data";
 const Contact = () => {
   return (
-    <section className="py-16 sm:py-20 px-6 sm:px-8 bg-gradient-to-br from-gray-50 to-white ">
+    <section className="py-16 sm:py-20 px-6 sm:px-8 bg-linear-to-br from-gray-50 to-white ">
       <div className="max-w-5xl mx-auto flex flex-col gap-4 sm:gap-18 ">
         {/* Heading */}
         <div className=" place-items-center">
-          <h2 className="contact-heading text-3xl sm:text-5xl font-bold text-neutral-600 bg-gradient-to-r from-[#2D2A4A] to-[#6C63FF] bg-clip-text text-transparent">
+          <h2 className="contact-heading text-3xl sm:text-5xl font-bold text-neutral-600 bg-linear-to-r from-[#2D2A4A] to-[#6C63FF] bg-clip-text">
             Let's Work Together
           </h2>
         </div>
@@ -39,7 +39,7 @@ const Contact = () => {
               <span>📍</span>
               <div className="flex flex-col text-sm">
                 <span className="text-gray-800 font-medium">Location</span>
-                <span className="text-gray-600">Dehradun, India</span>
+                <span className="text-gray-600">Bangalore, India</span>
               </div>
             </div>
 
@@ -91,7 +91,7 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="  bg-[#3E5F4B] text-white py-3 rounded-lg font-semibold bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transition"
+                className="  bg-[#3E5F4B] text-white py-3 rounded-lg font-semibold bg-linear-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transition"
               >
                 Send Message
               </button>

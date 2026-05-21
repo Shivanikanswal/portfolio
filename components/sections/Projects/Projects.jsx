@@ -48,7 +48,7 @@ const Projects = () => {
                           return (
                             <div
                               key={index}
-                              className="bg-gradient-to-r from-blue-100 to-purple-100 rounded-2xl px-3 py-1 text-blue-800 text-xs sm:text-sm font-semibold shadow-sm hover:shadow-md hover:scale-110 transition-all duration-300 border border-blue-200/50"
+                              className="bg-linear-to-r from-blue-100 to-purple-100 rounded-2xl px-3 py-1 text-blue-800 text-xs sm:text-sm font-semibold shadow-sm hover:shadow-md hover:scale-110 transition-all duration-300 border border-blue-200/50"
                             >
                               <span>{itm}</span>
                             </div>

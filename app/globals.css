@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@theme {
+  --breakpoint-md: 768px;
+  --breakpoint-wide: 1170px;
+}
+
 .body {
   font-family: var(--font-inter), system-ui, sans-serif;
 }
