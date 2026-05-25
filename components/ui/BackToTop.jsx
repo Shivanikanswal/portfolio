@@ -39,6 +39,3 @@ export default function BackToTop() {
     </motion.button>
   );
 }
-
-// Now the button is always visible from the start
-// It slightly scales when user scrolls for a nice UI effect

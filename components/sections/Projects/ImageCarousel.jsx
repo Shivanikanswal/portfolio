@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
-// const SLIDE_WIDTH = 720;
 const AUTO_DELAY = 2000;
 
 export default function ImageCarousel({ images }) {

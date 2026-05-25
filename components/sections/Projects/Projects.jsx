@@ -11,7 +11,7 @@ const Projects = () => {
       id="projects"
       className="relative px-6 py-10 sm:py-24 min-h-screen place-items-center overflow-x-hidden"
     >
-      <div className="absolute  top-0 right-0 z-0 rounded-full bg-[#f8ebff] w-40 h-40 sm:w-96 sm:h-96 translate-x-1/2 -translate-y-6/12"></div>
+      <div className="absolute top-0 right-0 z-0 rounded-full bg-[#f8ebff] w-40 h-40 sm:w-96 sm:h-96 translate-x-1/2 -translate-y-6/12"></div>
       <section className="relative flex justify-center px-6 w-full">
         <div className="flex flex-col items-center mx-auto z-10">
           <p className="project-heading text-3xl sm:text-5xl font-semibold text-neutral-600 mb-10">
@@ -29,7 +29,6 @@ const Projects = () => {
                     ease: "easeOut",
                     delay: item.id * 0.1,
                   }}
-                  // whileHover={{ scale: 1.0 }}
                   className="bg-white p-10 shadow-md hover:shadow-2xl rounded-2xl border border-[#f3f3f3]"
                 >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">

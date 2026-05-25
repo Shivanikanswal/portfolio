@@ -4,7 +4,7 @@ import Image from "next/image";
 import { HomeData } from "../../public/data/home-data";
 const Contact = () => {
   return (
-    <section className="py-16 sm:py-20 px-6 sm:px-8 bg-linear-to-br from-gray-50 to-white ">
+    <section className="py-16 sm:py-20 px-6 sm:px-8 bg-linear-to-br from-gray-50 to-white relative overflow-x-hidden overflow-y-hidden ">
       <div className="max-w-5xl mx-auto flex flex-col gap-4 sm:gap-18 ">
         {/* Heading */}
         <div className=" place-items-center">
@@ -14,7 +14,7 @@ const Contact = () => {
         </div>
 
         {/* Contact + Form Wrapper */}
-        <div className="flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-16">
+        <div className="flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-16 z-10">
           {/* Contact Links */}
           <div className="flex flex-col gap-4 flex-1">
             <h3 className="contact-me text-lg sm:text-xl text-gray-800">
@@ -99,6 +99,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <div className="absolute bottom-0 right-0 z-0 rounded-full bg-[#e6daf9] w-40 h-40 sm:w-96 sm:h-96 translate-x-6/12 translate-y-6/12"></div>
     </section>
   );
 };

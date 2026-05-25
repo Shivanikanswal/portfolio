@@ -19,10 +19,9 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.45 }}
-          className="skill-heading text-3xl sm:text-5xl font-semibold text-neutral-500"
+          className="skill-heading text-center text-3xl sm:text-5xl font-semibold text-neutral-500"
         >
-          {" "}
-          Tools and Technologies{" "}
+          Tools and Technologies
         </motion.p>
         <motion.div
           initial="hidden"
@@ -64,7 +63,6 @@ const Skills = () => {
         </motion.div>
       </div>
       <div className="absolute top-0 left-0 rounded-full bg-[#dbdbf8] w-40 h-40 sm:w-96 sm:h-96 -translate-x-6/12 -translate-y-6/12"></div>
-      {/* <div className="absolute bottom-0 right-0 rounded-full bg-[#f8ebff] w-40 h-40 sm:w-90 sm:h-90 translate-x-6/12 translate-y-6/12"></div> */}
     </section>
   );
 };

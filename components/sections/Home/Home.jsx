@@ -61,7 +61,6 @@ const Home = () => {
                   }}
                 >
                   <Link
-                    // key={item.id}
                     href={item.href}
                     className="flex w-11 h-11 border border-gray-300 bg-white items-center justify-center rounded-xl shadow-md hover:scale-110 transition-all duration-300 "
                   >
