@@ -8,13 +8,13 @@ import { motion } from "motion/react";
 const Home = () => {
   return (
     <div
-      className=" flex flex-col justify-between pt-10 sm:pt-24 min-h-screen gap-10 sm:gap-24 text-neutral-700"
+      className=" flex flex-col justify-between pt-10 sm:pt-24 min-h-screen gap-10 sm:gap-24 text-neutral-700 overflow-x-hidden"
       style={{
         background: "radial-gradient(#c3c3ff, #fff)",
       }}
     >
-      <Section id="home" className="flex-1">
-        <div className="flex flex-col sm:gap-8 gap-4">
+      <Section id="home" className="flex-1 relative">
+        <div className="flex flex-col sm:gap-8 gap-4 z-10 relative">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -76,6 +76,11 @@ const Home = () => {
             })}
           </div>
         </div>
+
+        <div className="z-0 absolute bottom-0 right-0 translate-x-3/4 translate-y-1/2 w-[700px] h-[700px] rounded-full bg-gradient-to-br from-blue-400/20 to-purple-500/10 border border-white/20 backdrop-blur-md shadow-[inset_0_4px_20px_rgba(255,255,255,0.15)]" />
+
+        {/* Smaller overlapping circle */}
+        <div className="z-0 absolute top-10 left-0 -translate-x-3/4 -translate-y-3/5 w-[200px] h-[200px] rounded-full bg-gradient-to-tl from-purple-300/20 to-pink-200/10 border border-white/30 backdrop-blur-sm shadow-[inset_0_4px_16px_rgba(255,255,255,0.2),0_8px_40px_rgba(139,92,246,0.15)]" />
       </Section>
       <AnimationLayout />
     </div>
