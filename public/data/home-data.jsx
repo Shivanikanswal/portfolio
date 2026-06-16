@@ -20,7 +20,7 @@ export const HomeData = [
   {
     id: "download",
     label: "Resume",
-    href: "https://drive.google.com/file/d/1pRzZ_vYY2sp7XSDmtLF7zNIx8bgG3DIU/view?usp=sharing",
+    href: "https://drive.google.com/file/d/1LqFCvxnpJVpIuyV6fL2XhfbaLx6uxIwu/view?usp=drive_link",
     icon: "/utils/home/download.svg",
   },
 ];
